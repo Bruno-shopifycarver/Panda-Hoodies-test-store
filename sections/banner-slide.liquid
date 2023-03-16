@@ -1,40 +1,39 @@
 {{ 'banner-slide.css' | asset_url | stylesheet_tag }}
 
 <div id="BannerSlider">
-  	<div class="banner_slider--container">
-		<div class="banner_slider">
-			<div class="swiper-wrapper">
-				{%- for block in section.blocks -%}
-					{% assign banner_image_desktop = block.settings.banner_image_desktop %}
-					{% assign button_text = block.settings.button_text | strip %}
-					{% assign button_url = block.settings.button_url | strip %}
+  <div class="banner_slider--container">
+    <div class="banner_slider">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% assign banner_image_desktop = block.settings.banner_image_desktop %}
+          {% assign button_text = block.settings.button_text | strip %}
+          {% assign button_url = block.settings.button_url | strip %}
 
-					<div class="block_slider swiper-slide">
-						<div class="banner_slider--image">
-							<img
-								class="lazyload"
-								src="{{banner_image_desktop | img_url: 'master'}}"
-								width="{{banner_image_desktop.width}}"
-								height="{{banner_image_desktop.height}}"
-								style="width: 100%; height: auto;"
-							/>
-						</div>
-					</div>
-        			{% endfor %}
-      		</div>
-    		</div>
+          <div class="block_slider swiper-slide">
+            <div class="banner_slider--image">
+              <img
+                class="lazyload"
+                src="{{banner_image_desktop | img_url: 'master'}}"
+                width="{{banner_image_desktop.width}}"
+                height="{{banner_image_desktop.height}}"
+                style="width: 100%; height: auto;" />
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
 
-		<!-- If we need navigation buttons -->
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-	</div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
 </div>
 
 <script>
   var speed = parseInt("{{section.settings.slider_speed}}");
   var delay = parseInt("{{section.settings.slider_delay}}");
 
-  var mySwiper = new Swiper('.banner_slider--desktop', {
+  var mySwiper = new Swiper('.banner_slider', {
     direction: 'horizontal',
     speed: speed,
     loop: true,
