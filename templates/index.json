@@ -1,10 +1,41 @@
 {
   "sections": {
+    "1a433d65-4ec7-4484-b84c-3e9834eed7f7": {
+      "type": "banner-slide",
+      "blocks": {
+        "89bf1227-3226-47c7-95a5-4ff211fb1ac6": {
+          "type": "image_picker",
+          "settings": {
+            "banner_image_desktop": "shopify:\/\/shop_images\/fashionable-man-in-hat.jpg",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "5ccc60e0-2c7b-4b0f-934f-25a53aa07336": {
+          "type": "image_picker",
+          "settings": {
+            "banner_image_desktop": "shopify:\/\/shop_images\/man-sitting-in-city.jpg",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "89bf1227-3226-47c7-95a5-4ff211fb1ac6",
+        "5ccc60e0-2c7b-4b0f-934f-25a53aa07336"
+      ],
+      "settings": {
+        "slider_speed": 600,
+        "slider_delay": 5000
+      }
+    },
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "h0"
@@ -72,30 +103,11 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
-    },
-    "1a433d65-4ec7-4484-b84c-3e9834eed7f7": {
-      "type": "banner-slide",
-      "blocks": {
-        "89bf1227-3226-47c7-95a5-4ff211fb1ac6": {
-          "type": "image_picker",
-          "settings": {
-            "button_text": "",
-            "button_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "89bf1227-3226-47c7-95a5-4ff211fb1ac6"
-      ],
-      "settings": {
-        "slider_speed": 600,
-        "slider_delay": 5000
-      }
     }
   },
   "order": [
+    "1a433d65-4ec7-4484-b84c-3e9834eed7f7",
     "image_banner",
-    "featured_collection",
-    "1a433d65-4ec7-4484-b84c-3e9834eed7f7"
+    "featured_collection"
   ]
 }
