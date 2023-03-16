@@ -1,0 +1,20 @@
+.flex__container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.gap-2{
+    gap: 2%;
+}
+.product__card{
+    width: 100%;
+    max-width: 22%;
+}
+#FeaturedProduct img{
+    display: block;
+}
+.swatches .swtach__item{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
