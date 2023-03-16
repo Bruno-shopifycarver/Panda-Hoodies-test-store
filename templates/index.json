@@ -6,17 +6,13 @@
         "89bf1227-3226-47c7-95a5-4ff211fb1ac6": {
           "type": "image_picker",
           "settings": {
-            "banner_image_desktop": "shopify:\/\/shop_images\/fashionable-man-in-hat.jpg",
-            "button_text": "",
-            "button_url": ""
+            "banner_image_desktop": "shopify:\/\/shop_images\/fashionable-man-in-hat.jpg"
           }
         },
         "5ccc60e0-2c7b-4b0f-934f-25a53aa07336": {
           "type": "image_picker",
           "settings": {
-            "banner_image_desktop": "shopify:\/\/shop_images\/man-sitting-in-city.jpg",
-            "button_text": "",
-            "button_url": ""
+            "banner_image_desktop": "shopify:\/\/shop_images\/man-sitting-in-city.jpg"
           }
         }
       },
@@ -89,7 +85,7 @@
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
