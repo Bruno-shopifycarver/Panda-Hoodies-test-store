@@ -7,12 +7,12 @@
     {%- for product in featured_collection limit: 8 %}
       {% assign first_variant = product.first_available_variant %}
       <li class="product__card">
-        <div class="procuct__card-img"><img src="{{first_variant.image.src}}" alt="{{first_variant.title}}"></div>
+        <div class="procuct__card-img"><img src="{{first_variant.featured_image | img_url: 'medium'}}" alt="{{first_variant.title}}"></div>
         <h3 class="product__title">{{ first_variant.title }}</h3>
         <div class="swatches flex__container gap-2">
           {% for variant in product.variants %}
             <div class="swtach__item">
-              <img src="{{variant.option1 | append: 'swatch.jpg' | asset_url: 'small' }}" alt="{{variant.option1}}">
+              <img src="{{variant.option1 | append: 'swatch.jpg' | handleize | asset_url: 'small' }}" alt="{{variant.option1}}">
             </div>
           {% endfor %}
         </div>
