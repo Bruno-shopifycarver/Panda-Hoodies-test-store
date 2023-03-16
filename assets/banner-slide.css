@@ -1,0 +1,29 @@
+/** banner slider*/
+#BannerSlider{
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-family-secondary)
+}
+
+#BannerSlider .banner_slider--image{
+    display: block;
+}
+#BannerSlider .banner_slider--image img{
+    width: 100%;
+}
+.mobile_view{
+    display: none;
+}
+.swiper-button-prev:after, 
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-next:after{
+    font-size: 20px !important;
+    font-weight: bold;
+    color: #fff;
+}
+#BannerSlider .swiper-button-prev{
+    left: 145px;
+}
+#BannerSlider .swiper-button-next{
+    right: 145px;
+}

@@ -1,0 +1,178 @@
+{{ 'banner-slide.css' | asset_url | stylesheet_tag }}
+
+<div id="BannerSlider">
+  <div class="banner_slider--container">
+    <div class="mobile_view banner_slider--mobile">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% assign banner_image_mobile = block.settings.banner_image_mobile %}
+          {% assign button_text = block.settings.button_text | strip %}
+          {% assign button_url = block.settings.button_url | strip %}
+
+          <div class="block_slider swiper-slide">
+            <a
+              href="{{button_url}}"
+              title="{{button_text}}"
+              class="banner_slider--image">
+              {% if forloop.first == true %}
+                {% assign hs_data_src = banner_image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}<img
+                  class="lazyload hs-lazyload hs-id-31af7cd4 hs-id-1a7f24a7"
+                  data-aspectratio="{{ banner_image_mobile.aspect_ratio }}"
+                  data-parent-fit="contain"
+                  data-sizes="auto"
+                  data-src="{% render 'hs-image-transform' with img: hs_data_src %}"
+                  data-widths="[50,90,180,360,480,720,900,1080,1296,1512]"
+                  src="{% render 'hs-image-transform', img: banner_image_mobile, width: 'master' %}"
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+              {% else %}
+                {% assign hs_data_src = banner_image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}<img
+                  class="lazyload hs-lazyload hs-id-31af7cd4 hs-id-1a7f24a7"
+                  data-aspectratio="{{ banner_image_mobile.aspect_ratio }}"
+                  data-parent-fit="contain"
+                  data-sizes="auto"
+                  data-src="{% render 'hs-image-transform' with img: hs_data_src %}"
+                  data-widths="[50,90,180,360,480,720,900,1080,1296,1512]"
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+              {% endif %}
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="desktop_view banner_slider--desktop">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% assign banner_image_desktop = block.settings.banner_image_desktop %}
+          {% assign button_text = block.settings.button_text | strip %}
+          {% assign button_url = block.settings.button_url | strip %}
+
+          <div class="block_slider swiper-slide">
+            <a
+              href="{{button_url}}"
+              title="{{button_text}}"
+              class="banner_slider--image">
+              {% if forloop.first == true %}
+                <img
+                  class="lazyload"
+                  src="{% render 'hs-image-transform', img: banner_image_desktop, width: 'master' %}"
+                  width="{{banner_image_desktop.width}}"
+                  height="{{banner_image_desktop.height}}"
+                  style="width: 100%; height: auto;" />
+              {% else %}
+                <img
+                  class="lazyload"
+                  data-src="{% render 'hs-image-transform', img: banner_image_desktop, width: 'master' %}"
+                  width="{{banner_image_desktop.width}}"
+                  height="{{banner_image_desktop.height}}"
+                  style="width: 100%; height: auto;" />
+              {% endif %}
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<script>
+  var speed = parseInt("{{section.settings.slider_speed}}");
+  var delay = parseInt("{{section.settings.slider_delay}}");
+
+  var mySwiper = new Swiper('.banner_slider--desktop, .banner_slider--mobile', {
+    direction: 'horizontal',
+    speed: speed,
+    loop: true,
+    autoplay: {
+      delay: delay
+    },
+
+// Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+</script>
+
+{% schema %}
+  {
+    "name": {
+      "en": "Banner image slider"
+    },
+    "blocks": [
+      {
+        "type": "image_picker",
+        "name": {
+          "en": "Banner slider"
+        },
+        "settings": [
+          {
+            "type": "header",
+            "content": "Image Setting"
+          },
+          {
+            "type": "image_picker",
+            "id": "banner_image_desktop",
+            "label": {
+              "en": "Desktop Image"
+            }
+          },
+          {
+            "type": "image_picker",
+            "id": "banner_image_mobile",
+            "label": {
+              "en": "Mobile Image"
+            }
+          },
+          {
+            "type": "header",
+            "content": "Button Setting"
+          }, {
+            "type": "text",
+            "id": "button_text",
+            "label": {
+              "en": "Button text"
+            }
+          }, {
+            "type": "url",
+            "id": "button_url",
+            "label": {
+              "en": "Button URL"
+            }
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "number",
+        "id": "slider_speed",
+        "info": "in millisecond",
+        "default": 600,
+        "label": {
+          "en": "Slider speed",
+          "fr": "vitesse du slide"
+        }
+      }, {
+        "type": "number",
+        "id": "slider_delay",
+        "info": "in millisecond",
+        "default": 5000,
+        "label": {
+          "en": "Slider delay",
+          "fr": "delay du slide"
+        }
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner slide"
+      }
+    ]
+  }
+{% endschema %}
