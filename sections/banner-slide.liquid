@@ -15,7 +15,6 @@
                 class="lazyload"
                 src="{{banner_image_desktop | img_url: 'master'}}"
                 width="{{banner_image_desktop.width}}"
-                height="{{banner_image_desktop.height}}"
                 style="width: 100%; height: auto;" />
             </div>
           </div>
@@ -43,8 +42,8 @@
 
 // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.swiper-button .swiper-button-next',
+      prevEl: '.swiper-button .swiper-button-prev'
     }
   });
 </script>
