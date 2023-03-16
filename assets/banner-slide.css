@@ -2,7 +2,6 @@
 #BannerSlider{
     position: relative;
     overflow: hidden;
-    font-family: var(--font-family-secondary)
 }
 
 #BannerSlider .banner_slider--image{
@@ -30,4 +29,18 @@
 }
 #BannerSlider .swiper-button:empty{
     display: block;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 769px) {
+    #BannerSlider .swiper-button-prev{
+        left: 0;
+    }
+    #BannerSlider .swiper-button-next{
+        right: 0;
+    }
+    #BannerSlider .banner_slider--image img{
+        max-height: 500px;
+    }
 }
