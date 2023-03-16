@@ -11,9 +11,9 @@
           <div class="procuct__card-img"><img src="{{first_variant.featured_image | img_url: 'medium'}}" alt="{{first_variant.title}}"></div>
           <h3 class="product__title">{{ product.title }}</h3>
           <div class="swatches flex__container gap-2">
-            {% for option in product.variants.options %}
-              {{ option | json }}
-              {{ option.name }}
+            {{ product.variants.options | json }}
+            {% for option in product.variants.options %}{% comment %} {{ option | json }}
+              {{ option.name }} {% endcomment %}
               {% comment %} <div class="swtach__item">
               <img src="{{variant.option1 | handleize | append: '-swatch.jpg' | asset_url: 'small' }}" alt="{{variant.option1}}">
               </div> {% endcomment %}
