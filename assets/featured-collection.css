@@ -5,6 +5,9 @@
 .gap-2{
     gap: 2%;
 }
+li{
+    list-style-type: none;
+}
 .product__card{
     width: 100%;
     max-width: 22%;

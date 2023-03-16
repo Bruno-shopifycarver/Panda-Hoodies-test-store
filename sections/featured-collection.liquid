@@ -1,25 +1,28 @@
 {{ 'featured-collection.css' | asset_url | stylesheet_tag }}
 
 <div class="shopify__section-{{section.id}}" id="FeaturedProduct">
-  <h2 class="section__title">{{ section.settings.title }}</h2>
-  <ul class="flex__container gap-2">
-    {%- assign featured_collection = section.settings.collection.products -%}
-    {%- for product in featured_collection limit: 8 %}
-      {% assign first_variant = product.first_available_variant %}
-      <li class="product__card">
-        <div class="procuct__card-img"><img src="{{first_variant.featured_image | img_url: 'medium'}}" alt="{{first_variant.title}}"></div>
-        <h3 class="product__title">{{ first_variant.title }}</h3>
-        <div class="swatches flex__container gap-2">
-          {% for option in product.variants.options %}
-            {{ option | json }}
-            <div class="swtach__item">
+  <div class="page-width">
+    <h2 class="section__title">{{ section.settings.title }}</h2>
+    <ul class="flex__container gap-2">
+      {%- assign featured_collection = section.settings.collection.products -%}
+      {%- for product in featured_collection limit: 8 %}
+        {% assign first_variant = product.first_available_variant %}
+        <li class="product__card">
+          <div class="procuct__card-img"><img src="{{first_variant.featured_image | img_url: 'medium'}}" alt="{{first_variant.title}}"></div>
+          <h3 class="product__title">{{ product.title }}</h3>
+          <div class="swatches flex__container gap-2">
+            {% for option in product.variants.options %}
+              {{ option | json }}
+              {{ option.name }}
+              {% comment %} <div class="swtach__item">
               <img src="{{variant.option1 | handleize | append: '-swatch.jpg' | asset_url: 'small' }}" alt="{{variant.option1}}">
-            </div>
-          {% endfor %}
-        </div>
-      </li>
-    {% endfor -%}
-  </ul>
+              </div> {% endcomment %}
+            {% endfor %}
+          </div>
+        </li>
+      {% endfor -%}
+    </ul>
+  </div>
 </div>
 
 
