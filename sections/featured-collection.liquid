@@ -17,7 +17,7 @@
               {% unless color_list contains option_color %}
                 {% assign color_list = color_list | append: option_color %}
                 <div class="swtach__item">
-                  <img src="{{ option_color | append: '-swatch.jpg' | asset_img_url }}" alt="{{variant.option1}}">
+                  <img src="{{ option_color | append: '-swatch.jpg' | file_img_url }}" alt="{{variant.option1}}">
                 </div>
               {% endunless %}
             {% endfor %}
@@ -28,6 +28,22 @@
               <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
             </div>
           </div>
+          {% assign count_instruction = product.metafields.care.instruction.value.size %}
+          {{ product.metafields.care.instruction }}
+          {% if count_instruction > 0 %}
+            <ul class="care__instructions flex__container">
+              {% for instruction in product.metafields.care.instruction.value %}
+                <li class="intruction__item">
+                  <img
+                    src="{{ instruction | replace: ' ', '_' | append: '.jpg'  | file_img_url }}"
+                    alt="{{instruction}}"
+                    class="picto">
+                  <div class="care__title">{{ instruction }}</div>
+                </li>
+              {% endfor %}
+
+            </ul>
+          {% endif %}
         </li>
       {%- endfor -%}
     </ul>
