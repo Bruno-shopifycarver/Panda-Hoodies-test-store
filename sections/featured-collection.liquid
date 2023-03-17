@@ -14,6 +14,7 @@
             {% for variant in product.variants %}
               {% assign option_color = variant.option1 | handleize %}
               {% assign color_list = color_list | append: option_color %}
+
               {% unless color_list contains option_color %}
                 <div class="swtach__item">
                   <img src="{{ option_color | append: '-swatch.jpg' | img_url: 'small' }}" alt="{{variant.option1}}">
