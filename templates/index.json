@@ -106,7 +106,7 @@
         "template--18244801397015__cd52d574-c09e-4cfa-a14e-4d5958071624-1679058598212d24a0-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Our Compagny",
             "heading_size": "h1"
           }
         },
@@ -116,19 +116,11 @@
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
-        },
-        "template--18244801397015__cd52d574-c09e-4cfa-a14e-4d5958071624-1679058598212d24a0-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
         "template--18244801397015__cd52d574-c09e-4cfa-a14e-4d5958071624-1679058598212d24a0-0",
-        "template--18244801397015__cd52d574-c09e-4cfa-a14e-4d5958071624-1679058598212d24a0-1",
-        "template--18244801397015__cd52d574-c09e-4cfa-a14e-4d5958071624-1679058598212d24a0-2"
+        "template--18244801397015__cd52d574-c09e-4cfa-a14e-4d5958071624-1679058598212d24a0-1"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-03-16_at_17.02.44.jpg",
