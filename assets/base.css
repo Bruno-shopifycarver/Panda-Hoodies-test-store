@@ -1715,7 +1715,7 @@ details[open] > .share-button__fallback {
   min-height: calc(var(--inputs-border-width) * 2);
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
   position: relative;
-  border: 0;
+  border: 1px solid #212121;
 }
 
 .field:before,
@@ -1864,6 +1864,7 @@ details[open] > .share-button__fallback {
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
   line-height: 1.5;
+  padding-left: 5px;
 }
 
 .field__input:focus ~ .field__label,
@@ -3026,4 +3027,20 @@ details-disclosure > details {
   .localization-form__select:focus {
     outline: transparent solid 1px;
   }
+}
+
+/* new sections styles */
+.flex__container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.gap-2{
+  gap: 2%;
+}
+li{
+  list-style-type: none;
+}
+ul, li{
+  margin: 0;
+  padding: 0;
 }
