@@ -8,20 +8,53 @@
 li{
     list-style-type: none;
 }
+ul, li{
+    margin: 0;
+    padding: 0;
+}
+.card__item_pd{
+    padding-bottom: 10px;
+}
 .product__card{
-    width: 100%;
-    max-width: 22%;
+    width: 22%;
 }
-#FeaturedProduct img{
+.product__title{
     display: block;
+    padding-bottom: 15px;
 }
-.swatches .swtach__item{
+#FeaturedProduct{
+    margin-bottom: 50px;
+}
+#FeaturedProduct .procuct__card-img img{
+    width: 100%;
+}
+.swatches .swatch__item{
     width: 30px;
     height: 30px;
     border: 1px solid #000;
     border-radius: 50%;
 }
-.swatches .swtach__item img{
+.swatches .swatch__item img{
     width: 100%;
     border-radius: 50%;
+}
+
+/* care innstruction */
+.care__instructions .instruction__item{
+    width: 70px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 21px;
+}
+.care__instructions .instruction__item img{
+    margin: auto;
+    width: 100%;
+}
+
+
+/* responsive */
+@media only screen and (max-width: 769px) {
+    .product__card{
+        width: 49%;
+    }
 }

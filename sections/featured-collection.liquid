@@ -8,32 +8,31 @@
       {%- for product in featured_collection limit: 8 %}
         {% assign first_variant = product.first_available_variant %}
         <li class="product__card">
-          <div class="procuct__card-img"><img src="{{first_variant.featured_image | img_url: 'medium'}}" alt="{{first_variant.title}}"></div>
+          <div class="procuct__card-img card__item_pd"><img src="{{first_variant.featured_image | img_url: 'medium'}}" alt="{{first_variant.title}}"></div>
           <a href="{{ product.url }}" class="product__title">{{ product.title }}</a>
-          <div class="swatches flex__container gap-2">
+          <div class="swatches flex__container gap-2 card__item_pd">
             {% for variant in product.variants %}
               {% assign option_color = variant.option1 | handleize %}
 
               {% unless color_list contains option_color %}
                 {% assign color_list = color_list | append: option_color %}
-                <div class="swtach__item">
+                <div class="swatch__item">
                   <img src="{{ option_color | append: '-swatch.jpg' | file_img_url }}" alt="{{variant.option1}}">
                 </div>
               {% endunless %}
             {% endfor %}
           </div>
-          <div class="product__price flex__container">
+          <div class="product__price flex__container gap-2 card__item_pd">
             <span class="regular__price">{{ first_variant.price | money }}</span>
             <div class="reviews">
               <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
             </div>
           </div>
           {% assign count_instruction = product.metafields.care.instruction.value.size %}
-          {{ product.metafields.care.instruction }}
           {% if count_instruction > 0 %}
-            <ul class="care__instructions flex__container">
+            <ul class="care__instructions flex__container gap-2 card__item_pd">
               {% for instruction in product.metafields.care.instruction.value %}
-                <li class="intruction__item">
+                <li class="instruction__item">
                   <img
                     src="{{ instruction | replace: ' ', '_' | append: '.jpg'  | file_img_url }}"
                     alt="{{instruction}}"
