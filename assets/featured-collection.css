@@ -1,17 +1,3 @@
-.flex__container{
-    display: flex;
-    flex-wrap: nowrap;
-}
-.gap-2{
-    gap: 2%;
-}
-li{
-    list-style-type: none;
-}
-ul, li{
-    margin: 0;
-    padding: 0;
-}
 .card__item_pd{
     padding-bottom: 10px;
 }
@@ -42,13 +28,17 @@ ul, li{
     width: 100%;
     border-radius: 50%;
 }
+.spr-badge-starrating .spr-icon {
+    color: #BF6385;
+}
 
 /* care innstruction */
-.care__instructions .instruction__item{
-    width: 70px;
+.care__instructions .instruction__item {
+    width: 19%;
     text-align: center;
-    font-size: 13px;
-    line-height: 21px;
+    font-size: 10px;
+    line-height: 15px;
+    margin-bottom: 15px;
 }
 .care__instructions .instruction__item img{
     margin: auto;
