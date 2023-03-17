@@ -23,4 +23,5 @@ li{
 }
 .swatches .swtach__item img{
     width: 100%;
+    border-radius: 50%;
 }
