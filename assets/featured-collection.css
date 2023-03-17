@@ -21,3 +21,6 @@ li{
     border: 1px solid #000;
     border-radius: 50%;
 }
+.swatches .swtach__item img{
+    width: 100%;
+}

@@ -17,7 +17,7 @@
               {% unless color_list contains option_color %}
                 {% assign color_list = color_list | append: option_color %}
                 <div class="swtach__item">
-                  <img src="{{ option_color | append: '-swatch.jpg' | asset_url: 'small' }}" alt="{{variant.option1}}">
+                  <img src="{{ option_color | append: '-swatch.jpg' | asset_img_url: 'small' }}" alt="{{variant.option1}}">
                 </div>
               {% endunless %}
             {% endfor %}
