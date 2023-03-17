@@ -51,4 +51,7 @@
     .product__card{
         width: 49%;
     }
+    .care__instructions .instruction__item{
+        width: 32%;
+    }
 }
