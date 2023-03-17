@@ -135,12 +135,23 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "a8fe01ab-73ce-4b17-a865-6a3c8546b064": {
+      "type": "contact-us",
+      "settings": {
+        "heading": "Contact us",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 56,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "1a433d65-4ec7-4484-b84c-3e9834eed7f7",
     "image_banner",
     "featured_collection",
-    "cd52d574-c09e-4cfa-a14e-4d5958071624"
+    "cd52d574-c09e-4cfa-a14e-4d5958071624",
+    "a8fe01ab-73ce-4b17-a865-6a3c8546b064"
   ]
 }
