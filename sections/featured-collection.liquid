@@ -25,12 +25,7 @@
           <div class="product__price">
             <span class="regular__price">{{ first_variant.price | money }}</span>
             <span class="reviews">
-              {%- for block in section.blocks -%}
-                {%- case block.type -%}
-                  {%- when '@app' -%}
-                  {% render block %}
-                {%- endcase -%}
-              {%- endfor -%}
+              {{ product.metafields.spr.reviews }}
             </span>
           </div>
         </li>
