@@ -152,6 +152,13 @@
         "padding_top": 56,
         "padding_bottom": 40
       }
+    },
+    "08ae7c01-a7eb-494d-8bc7-a338da11c640": {
+      "type": "section-map",
+      "settings": {
+        "api_key": "",
+        "params": ""
+      }
     }
   },
   "order": [
@@ -159,6 +166,7 @@
     "image_banner",
     "featured_collection",
     "cd52d574-c09e-4cfa-a14e-4d5958071624",
-    "a8fe01ab-73ce-4b17-a865-6a3c8546b064"
+    "a8fe01ab-73ce-4b17-a865-6a3c8546b064",
+    "08ae7c01-a7eb-494d-8bc7-a338da11c640"
   ]
 }
