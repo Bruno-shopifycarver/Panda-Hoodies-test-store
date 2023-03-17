@@ -1,0 +1,30 @@
+<iframe
+  width="100%"
+  height="400"
+  frameborder="0"
+  style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key={{section.settings.api_secret}}&{{section.settings.params | replace: ' ', '+'}}"
+  allowfullscreen></iframe>
+
+{% schema %}
+  {
+    "name": "Map",
+    "settings": [
+      {
+        "label": "API KEY",
+        "type": "text",
+        "id": "api_key"
+      }, {
+        "label": "Parameters",
+        "type": "textarea",
+        "id": "params"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Map"
+      }
+    ]
+  }
+{% endschema %}
