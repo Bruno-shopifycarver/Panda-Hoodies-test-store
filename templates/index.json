@@ -100,24 +100,34 @@
         "padding_bottom": 36
       }
     },
-    "7bbed95e-c8b4-4e5d-9904-78f97abb4570": {
+    "f86c9e11-4933-4010-8e4a-c95830f89f50": {
+      "type": "contact-us",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4749d55d-6da3-4b34-b889-1ad7dd7019ba": {
       "type": "section-about-us",
       "blocks": {
-        "template--18244801397015__7bbed95e-c8b4-4e5d-9904-78f97abb4570-16790582393a6fc24f-0": {
+        "template--18244801397015__4749d55d-6da3-4b34-b889-1ad7dd7019ba-16790582393a6fc24f-0": {
           "type": "heading",
           "settings": {
             "heading": "Image with text",
             "heading_size": "h1"
           }
         },
-        "template--18244801397015__7bbed95e-c8b4-4e5d-9904-78f97abb4570-16790582393a6fc24f-1": {
+        "template--18244801397015__4749d55d-6da3-4b34-b889-1ad7dd7019ba-16790582393a6fc24f-1": {
           "type": "text",
           "settings": {
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
         },
-        "template--18244801397015__7bbed95e-c8b4-4e5d-9904-78f97abb4570-16790582393a6fc24f-2": {
+        "template--18244801397015__4749d55d-6da3-4b34-b889-1ad7dd7019ba-16790582393a6fc24f-2": {
           "type": "button",
           "settings": {
             "button_label": "Button label",
@@ -126,9 +136,9 @@
         }
       },
       "block_order": [
-        "template--18244801397015__7bbed95e-c8b4-4e5d-9904-78f97abb4570-16790582393a6fc24f-0",
-        "template--18244801397015__7bbed95e-c8b4-4e5d-9904-78f97abb4570-16790582393a6fc24f-1",
-        "template--18244801397015__7bbed95e-c8b4-4e5d-9904-78f97abb4570-16790582393a6fc24f-2"
+        "template--18244801397015__4749d55d-6da3-4b34-b889-1ad7dd7019ba-16790582393a6fc24f-0",
+        "template--18244801397015__4749d55d-6da3-4b34-b889-1ad7dd7019ba-16790582393a6fc24f-1",
+        "template--18244801397015__4749d55d-6da3-4b34-b889-1ad7dd7019ba-16790582393a6fc24f-2"
       ],
       "settings": {
         "height": "adapt",
@@ -142,23 +152,13 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "44f45536-ab90-4c89-8553-53545c6156ae": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "Contact us",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "1a433d65-4ec7-4484-b84c-3e9834eed7f7",
     "image_banner",
     "featured_collection",
-    "7bbed95e-c8b4-4e5d-9904-78f97abb4570",
-    "44f45536-ab90-4c89-8553-53545c6156ae"
+    "f86c9e11-4933-4010-8e4a-c95830f89f50",
+    "4749d55d-6da3-4b34-b889-1ad7dd7019ba"
   ]
 }
