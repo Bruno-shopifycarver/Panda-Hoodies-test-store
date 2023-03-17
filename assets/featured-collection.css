@@ -28,6 +28,10 @@ ul, li{
 #FeaturedProduct .procuct__card-img img{
     width: 100%;
 }
+.section__title{
+    font-family: "museo_sans700";
+    font-size: 35px;
+}
 .swatches .swatch__item{
     width: 30px;
     height: 30px;
