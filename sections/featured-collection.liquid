@@ -9,7 +9,7 @@
         {% assign first_variant = product.first_available_variant %}
         <li class="product__card">
           <div class="procuct__card-img"><img src="{{first_variant.featured_image | img_url: 'medium'}}" alt="{{first_variant.title}}"></div>
-          <h3 class="product__title">{{ product.title }}</h3>
+          <a href="{{ product.url }}" class="product__title">{{ product.title }}</a>
           <div class="swatches flex__container gap-2">
             {% for variant in product.variants %}
               {% assign option_color = variant.option1 | handleize %}
@@ -22,11 +22,11 @@
               {% endunless %}
             {% endfor %}
           </div>
-          <div class="product__price">
+          <div class="product__price flex__container">
             <span class="regular__price">{{ first_variant.price | money }}</span>
-            <span class="reviews">
-              {{ product.metafields.spr.reviews }}
-            </span>
+            <div class="reviews">
+              <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+            </div>
           </div>
         </li>
       {%- endfor -%}
